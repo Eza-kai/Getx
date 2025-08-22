@@ -5,10 +5,18 @@ abstract class Routes {
   Routes._();
   static const HOME = _Paths.HOME;
   static const COUNTER = _Paths.COUNTER;
+  static const FORMULIR = _Paths.FORMULIR;
+  static const PEMESANAN = _Paths.PEMESANAN;
+  static const POST = _Paths.POST;
+  static const ALBUM = _Paths.ALBUM;
 }
 
 abstract class _Paths {
   _Paths._();
   static const HOME = '/home';
   static const COUNTER = '/counter';
+  static const FORMULIR = '/formulir';
+  static const PEMESANAN = '/pemesanan';
+  static const POST = '/post';
+  static const ALBUM = '/album';
 }

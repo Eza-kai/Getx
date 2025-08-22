@@ -9,11 +9,19 @@ class CounterView extends GetView<CounterController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green.shade50, 
+      backgroundColor: const Color(0xFFFFF1F5), // soft pink background
       appBar: AppBar(
-        title: const Text('CounterView'),
+        backgroundColor: const Color(0xFFF8BBD0), // pink pastel
+        title: const Text(
+          '🌸 Counter View',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
         centerTitle: true,
-        backgroundColor: Colors.green.shade400,
+        elevation: 6,
+        shadowColor: Colors.pinkAccent.withOpacity(0.4),
       ),
       body: Center(
         child: Column(
@@ -26,42 +34,38 @@ class CounterView extends GetView<CounterController> {
                   style: TextStyle(
                     fontSize: 20 + controller.count.value.toDouble(),
                     fontWeight: FontWeight.bold,
-                    color: Colors.green.shade800,
+                    color: Colors.pink.shade700,
                   ),
                   child: Text('Hitung ke: ${controller.count}'),
                 )),
-            const SizedBox(height: 30),
+            const SizedBox(height: 40),
 
-            // Tombol + dan - berdampingan
+            // Tombol + dan - dibikin pink soft
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [              
+              children: [
                 ElevatedButton(
                   onPressed: cont.decrement,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.green.shade600,
+                    backgroundColor: const Color(0xFFF48FB1), // soft pink
                     foregroundColor: Colors.white,
-                    elevation: 8, // efek shadow
-                    shadowColor: Colors.black54,
-                    padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
+                    elevation: 6,
+                    shadowColor: Colors.pinkAccent.withOpacity(0.5),
+                    padding: const EdgeInsets.all(18),
+                    shape: const CircleBorder(),
                   ),
                   child: const Icon(Icons.remove, size: 28),
                 ),
-                const SizedBox(width: 20),                
+                const SizedBox(width: 25),
                 ElevatedButton(
                   onPressed: cont.increment,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.green.shade300,
+                    backgroundColor: const Color(0xFFE91E63), // pink lebih pekat
                     foregroundColor: Colors.white,
-                    elevation: 8, // efek shadow
-                    shadowColor: Colors.black54,
-                    padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
+                    elevation: 6,
+                    shadowColor: Colors.pinkAccent.withOpacity(0.5),
+                    padding: const EdgeInsets.all(18),
+                    shape: const CircleBorder(),
                   ),
                   child: const Icon(Icons.add, size: 28),
                 ),

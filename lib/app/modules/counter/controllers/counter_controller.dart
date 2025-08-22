@@ -9,12 +9,15 @@ class CounterController extends GetxController {
       count.value++;
     } else {
       Get.snackbar(
-        'STOP',
-        'Maksimal 50 Yach <3',
+        '🌸 STOP 🌸',
+        'Maksimal 50 aja ya <3',
         snackPosition: SnackPosition.BOTTOM,
-        backgroundColor: Colors.red,
+        backgroundColor: const Color(0xFFF8BBD0), // pink pastel
         colorText: Colors.white,
-        icon: const Icon(Icons.warning, color: Colors.white),
+        borderRadius: 12,
+        margin: const EdgeInsets.all(12),
+        icon: const Icon(Icons.favorite, color: Colors.white),
+        snackStyle: SnackStyle.FLOATING,
       );
     }
   }
@@ -24,12 +27,15 @@ class CounterController extends GetxController {
       count.value--;
     } else {
       Get.snackbar(
-        'STOP',
-        'Gabisa Kurang Dari 0 Yach Ganteng',
+        '✨ STOP ✨',
+        'Gabisa kurang dari 0 ya ganteng 😘',
         snackPosition: SnackPosition.BOTTOM,
-        backgroundColor: Colors.green ,
+        backgroundColor: const Color(0xFFF48FB1), // soft pink
         colorText: Colors.white,
-        icon: const Icon(Icons.info, color: Colors.white),
+        borderRadius: 12,
+        margin: const EdgeInsets.all(12),
+        icon: const Icon(Icons.cake, color: Colors.white),
+        snackStyle: SnackStyle.FLOATING,
       );
     }
   }
